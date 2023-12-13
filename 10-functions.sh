@@ -9,7 +9,7 @@ else
 echo -e "\e[32m your root user"
 
 VALIDATION(){
-    if[$1 -ne 0]
+    if[ $1 -ne 0 ]
     then
     echo "$2 : failure"
     exit 1
