@@ -14,11 +14,15 @@ else
     echo "your root user"
 fi
 
+VALIDATE(){
+   if [ $1 -ne 0 ]
+   then
+       echo " $2 failed"
+   else
+       echo -e " $Y $2 success"
+   fi
+}
 yum install nodejs -y
 
-if [ $? -ne 0 ]
-then
-    echo "installation of nodejs is failed"
-else
-   echo -e " $Y installation of nodejs success"
-fi
+VALIDATE $? 
+
