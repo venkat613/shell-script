@@ -11,7 +11,7 @@ fi
 
 yum install nodejs -y
 
-if [$? -ne 0 ]
+if [ $? -ne 0 ]
 then
     echo "installation of nodejs is failed"
 else
