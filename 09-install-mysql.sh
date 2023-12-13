@@ -7,7 +7,7 @@ then
 echo "error: please run as root user"
 else
 echo "your root user"
-fi
+fi # fi means reverse of if, indicating condition end
 
 yum install mysql -y
 
