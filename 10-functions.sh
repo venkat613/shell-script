@@ -8,16 +8,15 @@ exit 1 #give other then 0
 else 
 echo -e "\e[32m your root user"
 
-VALIDATION(){
-    if[ $1 -ne 0 ]
+VALIDATE(){
+    if [ $1 -ne 0 ]
     then
-    echo "$2 : failure"
-    exit 1
+        echo "ERROR:: $2 ... FAILED"
+        exit 1
     else
-    echo "$2 : success"
-
+        echo "$2 ... SUCCESS"
+    fi
 }
-fi
 yum install mysql -y
 
 VALIDATION $? "install sql"
