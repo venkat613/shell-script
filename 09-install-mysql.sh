@@ -16,3 +16,4 @@ then
 echo "error : installation of my sql failed"
 else
 echo -e "installation of my sql \e[32m success"
+fi 
