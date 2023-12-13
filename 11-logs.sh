@@ -8,7 +8,7 @@ TIMESTAMP=$(date +F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 if [ $ID -ne 0 ]
 then
-   echo "$R error please run as root user"
+   echo -e "$R error please run as root user"
 else
-   echo "$G your root user"
+   echo -e "$G your root user"
 fi   
