@@ -17,3 +17,11 @@ echo "error : installation of my sql failed"
 else
 echo -e "installation of my sql \e[32m success"
 fi 
+yum install git -y
+
+if [ $? -ne 0 ]
+then
+echo -e "error : installation git is \e[31m failed"
+else
+echo -e "installtion of git is \e[32m success"
+fi
