@@ -25,3 +25,6 @@ VALIDATE(){
 yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "INSTALL MYSQL"
+
+yum install nodejs -y &>> $LOGFILE
+VALIDATE $? "install nodejs"
