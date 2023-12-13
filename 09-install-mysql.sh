@@ -25,3 +25,11 @@ echo -e "error : installation git is \e[31m failed"
 else
 echo -e "installtion of git is \e[32m success"
 fi
+yum install nodejs -y
+
+if [ $? -eq 0 ]
+then
+echo -e "installtion of nodejs \e[32m success"
+else
+echo -e "error : installation of nodejs \e[31m failed"
+fi
