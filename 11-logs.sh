@@ -23,3 +23,5 @@ VALIDATE(){
 }
 
 yum install mysql -y &>> $LOGFILE
+
+VALIDATE $? "INSTALL MYSQL"
