@@ -6,10 +6,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-TIMESTMP=$(date- +%F-%H-%M-%s)
+TIMESTMP=$(date +%F-%H-%M-%s)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-if [ $? -ne 0 ]
+if [ $ID -ne 0 ]
 then
     echo -e "$R error :: please run as root user"
     exit 1
