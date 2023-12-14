@@ -9,12 +9,13 @@ N="\e[0m"
 TIMESTMP=$(date +%F-%H-%M-%s)
 
 LOGFILE="/tmp/$0-$TIMESTMP.log"
+
 if [ $ID -ne 0 ]
 then
-    echo -e " $R error: $Y please run as root user" &>> $LOGFILE
+    echo -e " $R error: $Y please run as root user"
     exit 1
 else
-    echo -e "$G user root user" &>> $LOGFILE
+    echo -e "$G user root user"
 fi
 
 VALIDATE (){
@@ -27,6 +28,6 @@ VALIDATE (){
 }
 yum install mysql -y
 
-VALIDATE $? "installtion was success" &>> $LOGFILE
+VALIDATE $? "installtion was success" &>>
 
 
