@@ -6,19 +6,27 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+TIMESTMP=$(date +%F-%H-%M-%s)
+
+LOGFILE="/tmp/$0-$TIMESTMP.log"
 if [ $ID -ne 0 ]
 then
-    echo -e " $R error: $Y please run as root user"
+    echo -e " $R error: $Y please run as root user" &>> $LOGFILE
     exit 1
 else
-    echo -e "$G user root user"
+    echo -e "$G user root user" &>> $LOGFILE
 fi
 
-yum install git -y
+VALIDATE (){
+    if [ $1 -ne 0 ]
+    then
+        echo -e "$R $2 failed" 
+    else
+        echo -e "$G $2 success"
+    fi
+}
+yum install mysql -y
 
-if [ $? -ne 0 ]
-then
-    echo -e "$R instalation was failed"
-else
-    echo -e "$G instalation was success"
-fi
+VALIDATE $? "installtion was success" &>> $LOGFILE
+
+
