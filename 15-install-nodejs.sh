@@ -28,7 +28,7 @@ VALIDATE(){
 
 for PACKAGE in $@
 do
-  yum installed $PACKAGE
+  yum list installed $PACKAGE
   if [ $? -ne 0 ]
   then
       yum install $PACKAGE -y
